@@ -1,0 +1,75 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #4facff;
+  }
+  h1, h3, h5{
+    margin:2px; padding:2px;
+  }
+
+  .login {
+    margin:auto;
+    max-width:500px;
+  }
+  .login-form {
+    border:.5px solid #fff;
+    background:#fff;
+    border-radius:10px;
+    box-shadow:0px 0px 10px rgb(0, 0, 0);
+  }
+  .login-form h1 {
+    color:#4facff;
+    margin-bottom: 10px;
+  }
+  .login-form h3 {
+    text-align:left;
+    margin-left:40px;
+    color:black;
+  }
+  .login-form {
+    box-sizing:border-box;
+    padding-top:15px;
+    padding-bottom:5%;
+    margin:30% auto;
+    text-align:center;
+  }
+  .login input[type="text"],
+  .login input[type="password"] {
+    max-width:400px;
+    width: 70%;
+    line-height:3em;
+    font-family: 'Ubuntu', sans-serif;
+    margin:1em 0.5em;
+    border-radius:5px;
+    border:2px solid #4facff;
+    outline:none;
+    padding-left:10px;
+  }
+  .login-button {
+    padding: 15px 30px;
+    background:#4facff;
+    border:1px solid #4facff;
+    color: black;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    font-family: 'Ubuntu', sans-serif;
+    cursor:pointer;
+    opacity: 0.9;
+  }
+  .login-button:active{
+    transform: translateY(4px);
+  }
+
+  .login-button:hover{
+    opacity: 1;
+  }
+
+  a {
+    color: dodgerblue;
+  }
+
+  .sign-up {
+    color:black;
+    margin-left:-30%;
+    cursor:pointer; 
+  }
+

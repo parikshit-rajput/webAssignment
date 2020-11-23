@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Log in</title>
+        <link rel="stylesheet" type="text/css" href="Log_in.css">
+        <link rel="icon" href="login_icon.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    </head>
+    <body>
+    <div class="login">
+        <div class="login-form">
+          <h1>LOG IN</h1> 
+          
+          <form action="index.html" onsubmit="return validations()">
+            
+            <h3>Username/Email</h3>
+            <i class="fa fa-user fa-lg"></i>
+            <input type="text" placeholder="Username or Email" id="user" autocomplete="off"/><br>
+            <span id="Username" style="color:red; font-weight: bold; font-size:small"></span>
+
+            <h3>Password</h3>
+            <i class="fa fa-key fa-lg"></i>
+            <input type="password" placeholder="Password" id="pass" autocomplete="off"/><br>
+            <span id="Password" style="color:red; font-weight: bold; font-size:small"></span><br>
+            
+            <button type="submit" class="login-button"><b>Login</b></button><br>
+            
+            <span class="sign-up" >Don't have an account? <a href="index.html">Sign Up</a></span>
+            
+          </form>
+        </div>
+      </div>
+      <script>
+        function validations(){
+          var user = document.getElementById('user').value;
+          var pass = document.getElementById('pass').value;
+
+          if(user==""){
+              document.getElementById('Username').innerHTML="*Invalid Username*";
+              return false; 
+              }  
+          if(pass==""){
+              document.getElementById('Password').innerHTML="*Invalid Password*";
+              return false;
+              }
+          if((pass.length <= 5) || (pass.length > 20)) {
+				      document.getElementById('Password').innerHTML ="*Passwords length must be between 5 and 20*";
+			      	return false;	
+		      	  }            
+        }
+      </script>
+    </body>
+</html>
