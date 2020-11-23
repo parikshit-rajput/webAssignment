@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sign Up</title>
+        <link rel="stylesheet" type="text/css" href="Sign_Up.css">
+        <link rel="icon" href="register_icon.webp">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    </head>
+    <body>
+        <div class="container">
+          <div class="Sign-up">
+            <h1>SIGN UP</h1>
+            
+            <form action="Log_in.html" onsubmit="return validation()">
+              <h3>Username</h3>
+              <i class="fa fa-user fa-lg" style="font-size: 22px"></i>
+              <input type="text" placeholder="Username" id="user" autocomplete="off"><br>
+              <span id="Username" style="color:red; font-weight: bold; font-size:small"></span>
+         
+              <h3>Email</h3>
+              <i class="fa fa-envelope" style="font-size: 20px;"></i>
+              <input type="text" placeholder="mail@gmail.com" id="email" autocomplete="off"/><br>
+              <span id="Email" style="color:red; font-weight: bold; font-size:small"></span>
+
+              <h3>Password</h3>
+              <i class="fa fa-lock" style="font-size: 24px;"></i>
+              <input type="password" placeholder="Password" id="pass"/><br>
+              <span id="Password" style="color:red; font-weight: bold; font-size:small"></span>
+
+              <h3>Confirm Password</h3>
+              <i class="fa fa-check" style="font-size:24px"></i>
+              <input type="password" placeholder="Password" id="cnfPass"/><br>
+              <span id="cPass" style="color:red; font-weight: bold; font-size:small"></span>
+
+              <button type="submit" class="registerbtn">Register</button><br>
+              
+              <span class="sign-up" >Already have an account? <a href="Log_in.html">LogIn</a></span>
+            </form>  
+          </div>  
+        </div>
+
+        <script>
+          function validation(){
+            var user = document.getElementById('user').value;
+            var email = document.getElementById('email').value;
+            var pass = document.getElementById('pass').value;
+            var cnfPass = document.getElementById('cnfPass').value;
+
+            /* var regx = /^([a-z A-Z 0-9\.-]+)@([a-z A-Z 0-9 -]+).([a-z]{2, 8})(.[a-z]{2,8})?$/; */
+
+            if(user==""){
+              document.getElementById('Username').innerHTML="*Username Required*";
+              return false;
+              }
+            if(!isNaN(user)){
+				      document.getElementById('Username').innerHTML ="*Only numbers are not allowed*";
+				      return false;
+		        	}
+            if((user.length <= 2) || (user.length > 20)) {
+				      document.getElementById('Username').innerHTML ="*Username length must be between 2 and 20*";
+				      return false;	
+			        }
+
+            if(email==""){
+              document.getElementById('Email').innerHTML="*Email Required*";
+              return false;
+              }
+            if(email.indexOf('@') <= 0 ){
+			      	document.getElementById('Email').innerHTML =" *Invalid @ position*";
+				      return false;
+			        }                
+		      	if((email.charAt(email.length-4)!='.') && (email.charAt(email.length-3)!='.')){
+		      		document.getElementById('Email').innerHTML ="*Invalid Email address*";
+			      	return false;
+			        }
+
+            if(pass==""){
+              document.getElementById('Password').innerHTML="*Password Required*";
+              return false;
+              }
+            if((pass.length <= 5) || (pass.length > 20)) {
+				      document.getElementById('Password').innerHTML ="*Passwords length must be between 5 and 20*";
+			      	return false;	
+		      	  }
+              
+            if((pass!=cnfPass) && (cnfPass=="")){
+				      document.getElementById('cPass').innerHTML ="*Password does not match with confirm password*";
+			      	return false;
+              }
+          }
+        </script>
+    </body>

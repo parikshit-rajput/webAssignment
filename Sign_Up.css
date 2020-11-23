@@ -1,0 +1,76 @@
+body {
+    margin:0px;
+    font-family: 'Times New Roman', Times, serif;
+    background-size: 100% 110%;
+    background-color: #4facff;
+  }
+h1, h3 {
+    margin:0; padding:0px;
+  }
+.container {
+  margin:auto;
+  max-width:500px;
+  margin-top: 60px;
+}
+.Sign-up{
+    border:.5px solid #fff;
+    background:#fff;
+    border-radius:10px;
+    box-shadow:0px 0px 10px rgb(0, 0, 0);
+    box-sizing:border-box;
+    padding-top:5px;
+    padding-bottom:5%;
+    text-align:center;
+}
+.Sign-up h1{
+    color:#4facff;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.Sign-up h3{
+    text-align:left;
+    margin-left:40px;
+    color:black;
+}
+input[type=text], 
+input[type=password] {
+    max-width:400px;
+    width: 70%;
+    line-height:3em;
+    font-family: 'Ubuntu', sans-serif;
+    margin:1em 0.5em;
+    border-radius:5px;
+    border:2px solid #4facff;
+    outline:none;
+    padding-left:10px;
+}
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+.registerbtn {
+  background-color: #4facff;
+  color: black;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+  opacity: 0.9;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+.registerbtn:active{
+  transform: translateY(4px);
+}
+.registerbtn:hover {
+  opacity:1;
+}
+a {
+  color: dodgerblue;
+}
+.sign-up {
+    color:black;
+    margin-left:-30%;
+    cursor:pointer;
+  }
